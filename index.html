@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <!-- الحماية والأمان (Security & Hardening Meta Tags) -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; img-src 'self' data: https://images.unsplash.com https://*.unsplash.com https://*.google.com https://*.gstatic.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; connect-src 'self' https://wa.me; frame-src https://maps.google.com https://www.google.com; object-src 'none'; base-uri 'self'; form-action 'self' https://wa.me; upgrade-insecure-requests;"/>
+  <meta http-equiv="X-Content-Type-Options" content="nosniff"/>
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin"/>
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=()"/>
+
+  <title>بورصة للمفروشات | أكبر تشكيلة مفروشات وحافظات سجاد وأطقم عرائس في مصر</title>
+  <meta name="description" content="متجر بورصة للمفروشات - محور مؤسسة الزكاة بالمرج القاهرة. أفضل عروض وتخفيضات على حافظات السجاد، البطاطين، الألحفة، الملايات القطن، وأطقم العرائس بأسعار جملة وجودة ممتازة."/>
+  <meta name="keywords" content="بورصة للمفروشات, مؤسسة الزكاة, مفروشات المرج, حافظات سجاد, بطاطين مورا, لحاف فايبر, ملايات قطن العامرية, جهاز العروسة"/>
+  <meta name="theme-color" content="#0c2340"/>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="بورصة للمفروشات | كل اللي بتحلمي بيه هتلاقيه"/>
+  <meta property="og:description" content="أقوى عروض المفروشات وحافظات السجاد والبطاطين وأطقم العرائس في مصر مع معاينة قبل الاستلام."/>
+  <meta property="og:type" content="website"/>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet"/>
+
+  <!-- Font Awesome 6.4.0 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+  <!-- شريط الإعلانات الترويجي العلوي -->
+  <div class="announcement-bar">
+    <div class="container">
+      <div class="announcement-text">
+        <span class="announcement-badge">عرض خاص</span>
+        <span>🔥 كود الخصم <strong>BORSSA10</strong> يمنحك 10% خصم إضافي | شحن مجاني للطلبات فوق 1500 ج</span>
+      </div>
+      <div class="announcement-links">
+        <a href="tel:01555560928" class="announcement-link">
+          <i class="fas fa-phone-alt"></i> 01555560928
+        </a>
+        <a href="#location" class="announcement-link">
+          <i class="fas fa-map-marker-alt"></i> محور مؤسسة الزكاة - المرج
+        </a>
+        <a href="https://wa.me/201555560928" target="_blank" rel="noopener noreferrer" class="announcement-link" style="color:var(--accent-light);">
+          <i class="fab fa-whatsapp"></i> خدمة العملاء 24/7
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- الهيدر الرئيسي -->
+  <header>
+    <div class="container">
+      <a href="#home" class="logo">
+        <div class="logo-icon">
+          <i class="fas fa-crown"></i>
+        </div>
+        <div class="logo-text">
+          <span class="logo-title">بورصة</span>
+          <span class="logo-subtitle">للمفروشات العصرية</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul id="navMenu">
+          <li><a href="#home" class="active">الرئيسية</a></li>
+          <li><a href="#catalog">كتالوج المنتجات</a></li>
+          <li><a href="#flash-deals">العروض الحصرية</a></li>
+          <li><a href="#guide">دليل الخامات والمقاسات</a></li>
+          <li><a href="#reviews">آراء العملاء</a></li>
+          <li><a href="#location">موقع المعرض</a></li>
+          <li><a href="#faq">الأسئلة الشائعة</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <!-- زر المفضلة -->
+        <button class="icon-btn" onclick="openWishlistModal()" title="قائمة المفضلة" aria-label="المفضلة" type="button">
+          <i class="far fa-heart"></i>
+          <span class="badge-count wishlist-count-badge">0</span>
+        </button>
+
+        <!-- زر سلة التسوق -->
+        <button class="icon-btn" onclick="openCartDrawer()" title="سلة التسوق" aria-label="سلة التسوق" type="button">
+          <i class="fas fa-shopping-bag"></i>
+          <span class="badge-count cart-count-badge">0</span>
+        </button>
+
+        <!-- زر القائمة للهواتف -->
+        <button class="mobile-toggle" id="mobileToggle" aria-label="فتح القائمة" type="button">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- القسم الترحيبي الرئيسي (Hero Section) -->
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-tag">
+            <i class="fas fa-sparkles"></i>
+            أقوى عروض وتخفيضات جهاز العروسة في مصر
+          </div>
+          <h1>
+            كل اللي بتحلمي بيه <br/>
+            في <span class="highlight-gold">بورصة للمفروشات</span> هتلاقيه
+          </h1>
+          <p class="hero-description">
+            تشكيلة فاخرة من حافظات السجاد الووتربروف والقطيفة، البطاطين الإسباني والتركي، أطقم الألحفة والملايات القطن المصري 100%، وباقات العرائس المتكاملة بأسعار التكلفة مع إمكانية المعاينة قبل الاستلام.
+          </p>
+          <div class="hero-btns">
+            <a href="#catalog" class="btn btn-primary">
+              <i class="fas fa-shopping-cart"></i> تصفح المنتجات والعروض
+            </a>
+            <a href="#location" class="btn btn-outline-light">
+              <i class="fas fa-map-marked-alt"></i> عنوان المعرض وكيفية الوصول
+            </a>
+          </div>
+
+          <div class="hero-trust-stats">
+            <div class="stat-item">
+              <span class="stat-number">+15</span>
+              <span class="stat-label">سنة من الخبرة والثقة</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">+35,000</span>
+              <span class="stat-label">عروسة ومنزل تم تجهيزهم</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">قطن مصري وخامات ممتازة</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">14 يوم</span>
+              <span class="stat-label">ضمان استبدال ومعاينة</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-card-preview">
+          <div class="hero-main-card">
+            <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=800&q=80" alt="مفروشات بورصة"/>
+          </div>
+          <div class="hero-card-floating-badge">
+            <i class="fas fa-shield-check"></i>
+            <div>
+              <div style="font-size:0.95rem;line-height:1.2;">معاينة وفحص مجاني</div>
+              <div style="font-size:0.75rem;color:var(--text-muted);">افحص الخامة قبل الدفع للمندوب</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- شريط المزايا وعوامل الثقة (Features Strip) -->
+  <section class="features-strip">
+    <div class="container">
+      <div class="features-grid">
+        <div class="feature-box">
+          <div class="feature-icon-wrap">
+            <i class="fas fa-hand-holding-usd"></i>
+          </div>
+          <div class="feature-info">
+            <h4>الدفع عند الاستلام</h4>
+            <p>افحص وعاين جودة المفروشات كاملة قبل الدفع</p>
+          </div>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon-wrap">
+            <i class="fas fa-truck-fast"></i>
+          </div>
+          <div class="feature-info">
+            <h4>شحن سريع لجميع المحافظات</h4>
+            <p>توصيل آمن لباب بيتك خلال 24 إلى 48 ساعة</p>
+          </div>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon-wrap">
+            <i class="fas fa-certificate"></i>
+          </div>
+          <div class="feature-info">
+            <h4>خامات أصلية 100%</h4>
+            <p>قطن مصري عالي التيلة وحفر ليزر تركي مقاوم للتلف</p>
+          </div>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon-wrap">
+            <i class="fas fa-tags"></i>
+          </div>
+          <div class="feature-info">
+            <h4>أقوى عروض العرائس</h4>
+            <p>أسعار جملة وتخفيضات تصل إلى 40% على البكجات</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- سيكشن العروض الحصرية مع عداد تنازلي (Flash Deals) -->
+  <section id="flash-deals" class="flash-deals-section">
+    <div class="container">
+      <div class="flash-deals-grid">
+        <div class="flash-deals-content">
+          <span class="flash-badge">
+            <i class="fas fa-bolt"></i> عروض مهرجان التكلفة الأسبوعي
+          </span>
+          <h2>خصم حتى 35% على بكجات جهاز العروسة والبطاطين</h2>
+          <p>
+            استفد من خصومات بورصة الاستثنائية على أحدث تشكيلات أطقم اللحاف التركي والبطاطين الدبل راشيل وحافظات السجاد الووتربروف. العرض ساري حتى نفاد الكمية!
+          </p>
+
+          <!-- العداد التنازلي -->
+          <div class="countdown-timer">
+            <div class="timer-block">
+              <div class="timer-number" id="timerHours">48</div>
+              <div class="timer-label">ساعة</div>
+            </div>
+            <div class="timer-block">
+              <div class="timer-number" id="timerMinutes">00</div>
+              <div class="timer-label">دقيقة</div>
+            </div>
+            <div class="timer-block">
+              <div class="timer-number" id="timerSeconds">00</div>
+              <div class="timer-label">ثانية</div>
+            </div>
+          </div>
+
+          <a href="#catalog" class="btn btn-primary">
+            <i class="fas fa-tag"></i> تسوق العروض المتاحة الآن
+          </a>
+        </div>
+
+        <!-- بطاقة العرض البارز -->
+        <div class="deal-card-highlight">
+          <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80" alt="بكج جهاز العروسة الماسي"/>
+          <div class="deal-card-info">
+            <span class="save-pill">وفر 2250 جنيه</span>
+            <h3>بكج جهاز العروسة الماسي المتكامل (18 قطعة)</h3>
+            <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:0.6rem;">
+              لحاف تركي 6 قطع + بطانية مورا 9 كجم + حافظة سجاد 2×3 + 2 طقم ملايات قطن + فوط عرايسي + مخدات طبية
+            </p>
+            <div class="deal-price-tag">
+              <span class="current-price">4,950 ج</span>
+              <span class="old-price">7,200 ج</span>
+            </div>
+            <button class="btn btn-primary" style="padding:0.6rem 1.4rem;font-size:0.95rem;width:100%;" type="button" onclick="quickAddToCart('prod-012')">
+              <i class="fas fa-cart-plus"></i> اطلب البكج الآن
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- كتالوج المنتجات والأقسام (Catalog Section) -->
+  <section id="catalog" class="catalog-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">تشكيلة متجر بورصة للمفروشات</span>
+        <h2 class="section-title">كتالوج المنتجات</h2>
+        <p class="section-subtitle">
+          تصفحي أفضل الخامات والموديلات التركية والمصرية المختارة بعناية لتناسب كل الأذواق والبيوت العصرية
+        </p>
+      </div>
+
+      <!-- شريط الفلترة والأقسام والبحث -->
+      <div class="filter-bar">
+        <!-- التبويبات -->
+        <div class="categories-tabs">
+          <button class="category-tab active" data-category="all" type="button">
+            <i class="fas fa-th-large"></i> جميع المنتجات
+          </button>
+          <button class="category-tab" data-category="carpet-covers" type="button">
+            <i class="fas fa-rug"></i> حافظات السجاد
+          </button>
+          <button class="category-tab" data-category="blankets-quilts" type="button">
+            <i class="fas fa-bed"></i> البطاطين والألحفة
+          </button>
+          <button class="category-tab" data-category="bed-sheets" type="button">
+            <i class="fas fa-layer-group"></i> الملايات والمفارش
+          </button>
+          <button class="category-tab" data-category="bridal-sets" type="button">
+            <i class="fas fa-crown"></i> أطقم العرائس الفاخرة
+          </button>
+          <button class="category-tab" data-category="pillows-toppers" type="button">
+            <i class="fas fa-feather"></i> المخدات وواقي المرتبة
+          </button>
+          <button class="category-tab" data-category="towels" type="button">
+            <i class="fas fa-bath"></i> الفوط والبشاكير
+          </button>
+        </div>
+
+        <!-- البحث والترتيب -->
+        <div class="filter-actions-row">
+          <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input type="text" id="catalogSearchInput" placeholder="ابحث عن اسم المنتج، الخامة، أو المقاس..." maxlength="80"/>
+          </div>
+
+          <div class="sort-box">
+            <label for="catalogSortSelect"><i class="fas fa-sort-amount-down"></i> ترتيب حسب:</label>
+            <select id="catalogSortSelect">
+              <option value="featured">الأكثر تميزاً</option>
+              <option value="price-low">السعر: من الأقل للأعلى</option>
+              <option value="price-high">السعر: من الأعلى للأقل</option>
+              <option value="rating">الأعلى تقييماً</option>
+              <option value="discount">أكبر نسبة خصم</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- شبكة بطاقات المنتجات -->
+      <div class="products-grid" id="productsGrid">
+        <!-- سيتم تحميل المنتجات ديناميكياً بواسطة JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- دليل الخامات والمقاسات التفاعلي (Fabric & Size Guide) -->
+  <section id="guide" class="guide-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">إرشادات الشراء الذكي</span>
+        <h2 class="section-title">دليل المقاسات والخامات</h2>
+        <p class="section-subtitle">
+          تعرفي على كيفية اختيار المقاس المناسب لسجادتك وسريرك وتفاصيل الخامات المضمونة
+        </p>
+      </div>
+
+      <div class="guide-grid">
+        <div class="guide-card">
+          <div class="guide-card-icon">
+            <i class="fas fa-ruler-combined"></i>
+          </div>
+          <h3>مقاسات حافظات السجاد</h3>
+          <ul>
+            <li><i class="fas fa-check-circle"></i> <strong>2 × 3 متر:</strong> المقاس الأشهر للصالونات وغرف الاستقبال الكبيرة.</li>
+            <li><i class="fas fa-check-circle"></i> <strong>1.6 × 2.2 متر:</strong> ممتاز لغرف الأطفال وغرف النوم والمعيشة المتوسطة.</li>
+            <li><i class="fas fa-check-circle"></i> <strong>2 × 2.8 متر:</strong> مقاس جامبو مناسب للسجاد المودرن الكبير.</li>
+            <li><i class="fas fa-check-circle"></i> <strong>المشايات:</strong> مقاسات 80×200 سم و 100×300 سم للطرقات والممرات.</li>
+          </ul>
+        </div>
+
+        <div class="guide-card">
+          <div class="guide-card-icon">
+            <i class="fas fa-bed"></i>
+          </div>
+          <h3>مقاسات الألحفة والملايات</h3>
+          <ul>
+            <li><i class="fas fa-check-circle"></i> <strong>السرير الكبير (Master):</strong> ملايات ولحاف بمقاس كينج 240×260 سم.</li>
+            <li><i class="fas fa-check-circle"></i> <strong>سرير أطفال (Twin):</strong> مقاس 180×240 سم مخصص للسرير 120 سم.</li>
+            <li><i class="fas fa-check-circle"></i> <strong>الملايات الأستيك:</strong> متوفرة بارتفاع 30 سم لتغطي كامل جوانب المراتب التوكيلات.</li>
+          </ul>
+        </div>
+
+        <div class="guide-card">
+          <div class="guide-card-icon">
+            <i class="fas fa-award"></i>
+          </div>
+          <h3>مواصفات وضمان الخامات</h3>
+          <ul>
+            <li><i class="fas fa-check-circle"></i> <strong>القطن المصري 100%:</strong> قطن العامرية والمحلة ناعم ومضاد للحساسية.</li>
+            <li><i class="fas fa-check-circle"></i> <strong>تقنية الووتربروف TPU:</strong> عزل تام للسوائل بدون صوت خشخشة مزعج.</li>
+            <li><i class="fas fa-check-circle"></i> <strong>حفر الليزر البارز:</strong> ألياف مدمجة لا تتهالك ولا تبهت مع الغسيل.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- آراء العملاء وتقييماتهم (Customer Reviews) -->
+  <section id="reviews" class="reviews-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">تجارب حقيقية</span>
+        <h2 class="section-title">آراء عملاء بورصة</h2>
+        <p class="section-subtitle">
+          نفخر بثقة آلاف العملاء والعائلات والعرائس في جميع محافظات مصر
+        </p>
+      </div>
+
+      <div class="reviews-grid">
+        <div class="review-card-item">
+          <div class="review-stars-row">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="review-quote">
+            "اشتريت حافظتين سجاد ووتربروف وطقم لحاف تركي لجهازي، بجد الخامة وهمية فوق الوصف وظهر الحافظة ثابت جداً على السيراميك ومابتتزحلقش نهائي. المندوب سمحلي أعاين وأفتح قبل ما أدفع. شكراً بورصة على المصداقية!"
+          </p>
+          <div class="review-author-row">
+            <div class="author-avatar-circle">ن أ</div>
+            <div class="author-meta">
+              <h4>نورهان أحمد</h4>
+              <span class="verified-buyer-badge"><i class="fas fa-badge-check"></i> مشترية مؤكدة - القاهرة</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card-item">
+          <div class="review-stars-row">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="review-quote">
+            "روحت المعرض بنفسي في مؤسسة الزكاة بالمرج، المكان منظم جداً والأسعار أرخص من المحلات برة بكتير خصوصاً في عروض أطقم الملايات القطن العامرية والبطاطين المورا. التعامل في قمة الذوق والاحترام."
+          </p>
+          <div class="review-author-row">
+            <div class="author-avatar-circle">م ح</div>
+            <div class="author-meta">
+              <h4>محمود حسن</h4>
+              <span class="verified-buyer-badge"><i class="fas fa-badge-check"></i> زيارة مباشرة للمعرض - الجيزة</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card-item">
+          <div class="review-stars-row">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="review-quote">
+            "طلبت بكج جهاز العروسة الماسي عن طريق الواتساب ووصلني في الإسكندرية خلال 48 ساعة بس، التغليف شيك والعلب فخمة والمنتجات كلها أصلية زي الصور والفيديوهات بالظبط، وفرت كتير جداً في جهازي."
+          </p>
+          <div class="review-author-row">
+            <div class="author-avatar-circle">س ع</div>
+            <div class="author-meta">
+              <h4>سارة عادل</h4>
+              <span class="verified-buyer-badge"><i class="fas fa-badge-check"></i> مشترية مؤكدة - الإسكندرية</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- موقع المعرض وطرق الوصول (Store Location & Directions) -->
+  <section id="location" class="location-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">يسعدنا تشريفكم بالزيارة</span>
+        <h2 class="section-title">موقع المعرض وطرق الوصول</h2>
+        <p class="section-subtitle">
+          زورونا في معرضنا لمعاينة الخامات والموديلات على الطبيعة والاستفادة من عروض اليوم
+        </p>
+      </div>
+
+      <div class="location-grid">
+        <div class="location-info-card">
+          <div class="location-detail-item">
+            <div class="location-icon">
+              <i class="fas fa-map-pin"></i>
+            </div>
+            <div class="location-text">
+              <h4>العنوان الرئيسي:</h4>
+              <p>محور مؤسسة الزكاة - بجوار محطة عبد الله الرفاعي - حي المرج - القاهرة</p>
+            </div>
+          </div>
+
+          <div class="location-detail-item">
+            <div class="location-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <div class="location-text">
+              <h4>مواعيد العمل:</h4>
+              <p>يومياً من الساعة 10:00 صباحاً حتى 11:00 مساءً (الجمعة من 1:00 ظهراً)</p>
+            </div>
+          </div>
+
+          <div class="location-detail-item">
+            <div class="location-icon">
+              <i class="fas fa-phone-volume"></i>
+            </div>
+            <div class="location-text">
+              <h4>أرقام التواصل والواتساب:</h4>
+              <p>هاتف / واتساب: <strong style="color:var(--primary);">01555560928</strong></p>
+            </div>
+          </div>
+
+          <!-- إرشادات الوصول -->
+          <div class="directions-box">
+            <h4><i class="fas fa-route" style="color:var(--accent);"></i> إرشادات الوصول للمعرض بكل سهولة:</h4>
+            <ul>
+              <li><strong>عن طريق الطريق الدائري:</strong> النزول عند محطة / كوبري "مؤسسة الزكاة"، ثم استقلال مواصلة أو تاكسي لمدة 3 دقائق إلى محطة "عبد الله الرفاعي".</li>
+              <li><strong>عن طريق المترو (الخط الأول أو الثالث):</strong> أقرب محطات هي محطة مترو "عزبة النخل" أو محطة "هشام بركات / النزهة"، ومن هناك ميكروباص مباشر لمحطة عبد الله الرفاعي بمؤسسة الزكاة.</li>
+            </ul>
+          </div>
+
+          <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:0.5rem;">
+            <a href="https://www.google.com/maps/search/?api=1&query=محور+مؤسسة+الزكاة+بجوار+محطة+عبد+الله+الرفاعي+المرج+القاهرة" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="flex-grow:1;">
+              <i class="fas fa-location-arrow"></i> افتح الموقع في خرائط Google
+            </a>
+            <a href="tel:01555560928" class="btn" style="background:var(--primary);color:#ffffff;">
+              <i class="fas fa-phone"></i> اتصال مباشر
+            </a>
+          </div>
+        </div>
+
+        <!-- الخريطة المضمنة المحمية -->
+        <div class="location-map-wrap">
+          <iframe 
+            src="https://maps.google.com/maps?q=محور+مؤسسة+الزكاة+المرج+القاهرة&t=&z=14&ie=UTF8&iwloc=&output=embed" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            sandbox="allow-scripts allow-same-origin allow-popups"
+            title="خريطة معرض بورصة للمفروشات">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- الأسئلة الشائعة (FAQ Section) -->
+  <section id="faq" class="faq-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">كل ما تود معرفته</span>
+        <h2 class="section-title">الأسئلة الشائعة</h2>
+        <p class="section-subtitle">
+          إجابات واضحة على أكثر الأسئلة تكراراً حول الطلب، الشحن، والمعاينة
+        </p>
+      </div>
+
+      <div class="faq-container">
+        <div class="faq-item active">
+          <button class="faq-question" type="button">
+            <span>هل يمكنني معاينة وفتح المنتجات قبل الدفع للمندوب؟</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            نعم بالتأكيد! نحن نوفر ميزة المعاينة الكاملة عند الاستلام في جميع محافظات مصر، يحق لك فتح الشحنة وفحص الخامات والمقاسات والتأكد من مطابقتها قبل دفع أي مبلغ للمندوب.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>كم تستغرق مدة الشحن والتوصيل للمحافظات؟</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            التوصيل داخل القاهرة والجيزة والقليوبية يستغرق من 24 إلى 48 ساعة عمل. باقي محافظات الوجه البحري والقناة والصعيد من يومين إلى 4 أيام عمل كحد أقصى.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>ما هي سياسة الاستبدال والاسترجاع؟</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            نوفر سياسة استبدال واسترجاع مرنة خلال 14 يوماً من تاريخ الاستلام، بشرط الحفاظ على المنتج في حالته الأصلية وتغليفه.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>هل حافظات السجاد تنزلق على السيراميك؟</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            كافة حافظات السجاد المتوفرة في بورصة مزودة بظهر لاتكس محبب مانع للانزلاق 100% يلتصق بالسيراميك والباركيه ولا يتحرك مع حركة الأطفال أو المكنسة.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>ما هي طرق الدفع المتاحة لديكم؟</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            نوفر الدفع عند الاستلام نقداً (كاش)، أو التحويل الفوري عبر إنستاباي (InstaPay) ومحافظ فودافون كاش، وكذلك بطاقات الفيزا والماستركارد وفوري.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- قسم تواصل معنا المباشر -->
+  <section id="contact" style="padding:4rem 0;background:var(--bg-surface);border-top:1px solid var(--border);">
+    <div class="container">
+      <div style="max-width:680px;margin:0 auto;background:var(--bg-main);padding:2.5rem;border-radius:var(--radius-xl);border:1px solid var(--border);box-shadow:var(--shadow-sm);">
+        <div style="text-align:center;margin-bottom:1.5rem;">
+          <h3 style="font-size:1.8rem;color:var(--primary);font-weight:800;">هل لديك أي استفسار أو طلب خاص؟</h3>
+          <p style="color:var(--text-muted);font-size:0.95rem;">أرسل لنا رسالتك وسيتم الرد عليك فوراً عبر الواتساب من فريق خدمة عملاء بورصة</p>
+        </div>
+
+        <form id="contactForm">
+          <div class="form-group">
+            <label for="contactName">الاسم الكريم *</label>
+            <input type="text" id="contactName" placeholder="اكتب اسمك الكامل" maxlength="80" required/>
+          </div>
+          <div class="form-group">
+            <label for="contactPhone">رقم الهاتف / الواتساب *</label>
+            <input type="tel" id="contactPhone" placeholder="01xxxxxxxxx" maxlength="20" required/>
+          </div>
+          <div class="form-group">
+            <label for="contactMessage">تفاصيل الرسالة أو الطلب *</label>
+            <textarea id="contactMessage" rows="4" placeholder="اكتب استفسارك هنا وسنتواصل معك..." maxlength="300" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;padding:0.9rem;">
+            <i class="fab fa-whatsapp"></i> إرسال عبر واتساب مباشرة
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- الفوتر (Footer) -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <!-- نبذة -->
+        <div class="footer-col footer-about">
+          <div class="logo" style="margin-bottom:1rem;">
+            <div class="logo-icon">
+              <i class="fas fa-crown"></i>
+            </div>
+            <div class="logo-text">
+              <span class="logo-title">بورصة</span>
+              <span class="logo-subtitle">للمفروشات العصرية</span>
+            </div>
+          </div>
+          <p>
+            المعرض الرائد في مصر للمفروشات وحافظات السجاد وأطقم العرائس بمؤسسة الزكاة بالمرج. نوفر أعلى جودة وأفضل خامات قطنية بأسعار جملة تنافسية وضمان رضا تام.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://www.facebook.com/share/1Cem65p17X/" target="_blank" rel="noopener noreferrer" class="social-btn" title="فيسبوك" aria-label="فيسبوك">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.tiktok.com/@borsa.el.mafroshat" target="_blank" rel="noopener noreferrer" class="social-btn" title="تيك توك" aria-label="تيك توك">
+              <i class="fab fa-tiktok"></i>
+            </a>
+            <a href="https://www.instagram.com/borsa.elmafroshat" target="_blank" rel="noopener noreferrer" class="social-btn" title="إنستجرام" aria-label="إنستجرام">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/201555560928" target="_blank" rel="noopener noreferrer" class="social-btn" title="واتساب" aria-label="واتساب">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- روابط سريعة -->
+        <div class="footer-col">
+          <h3>أقسام الموقع</h3>
+          <div class="footer-links">
+            <a href="#home"><i class="fas fa-chevron-left"></i> الرئيسية</a>
+            <a href="#catalog"><i class="fas fa-chevron-left"></i> كتالوج المنتجات</a>
+            <a href="#flash-deals"><i class="fas fa-chevron-left"></i> عروض العرائس</a>
+            <a href="#guide"><i class="fas fa-chevron-left"></i> دليل المقاسات</a>
+            <a href="#reviews"><i class="fas fa-chevron-left"></i> آراء العملاء</a>
+            <a href="#location"><i class="fas fa-chevron-left"></i> خريطة المعرض</a>
+          </div>
+        </div>
+
+        <!-- الأقسام الأكثر طلباً -->
+        <div class="footer-col">
+          <h3>المنتجات الشائعة</h3>
+          <div class="footer-links">
+            <a href="#catalog"><i class="fas fa-chevron-left"></i> حافظات سجاد ووتربروف</a>
+            <a href="#catalog"><i class="fas fa-chevron-left"></i> بطاطين مورا راشيل 9 كجم</a>
+            <a href="#catalog"><i class="fas fa-chevron-left"></i> أطقم لحاف فايبر تركي</a>
+            <a href="#catalog"><i class="fas fa-chevron-left"></i> ملايات قطن العامرية 100%</a>
+            <a href="#catalog"><i class="fas fa-chevron-left"></i> بكجات جهاز العروسة</a>
+            <a href="#catalog"><i class="fas fa-chevron-left"></i> مخدات طبية ميموري فوم</a>
+          </div>
+        </div>
+
+        <!-- تواصل ومعلومات المعرض -->
+        <div class="footer-col">
+          <h3>تواصل وزيارة المعرض</h3>
+          <div class="footer-contact-info">
+            <div class="footer-contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>محور مؤسسة الزكاة - بجوار محطة عبد الله الرفاعي - المرج - القاهرة</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fas fa-phone-alt"></i>
+              <span>01555560928</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fas fa-clock"></i>
+              <span>يومياً من 10 ص إلى 11 م (الجمعة من 1 ظهراً)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 بورصة للمفروشات. جميع الحقوق محفوظة | موقع مؤمّن ومحمي بالكامل.
+        </div>
+        <div class="payment-badges">
+          <span class="payment-pill"><i class="fas fa-money-bill-wave"></i> دفع عند الاستلام</span>
+          <span class="payment-pill"><i class="fas fa-mobile-alt"></i> إنستاباي / كاش</span>
+          <span class="payment-pill"><i class="fab fa-cc-visa"></i> فيزا وماستركارد</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- درج سلة التسوق المنزلق (Slide-over Cart Drawer) -->
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="drawer-overlay" onclick="closeCartDrawer()"></div>
+    <div class="drawer-panel">
+      <div class="drawer-header">
+        <h3><i class="fas fa-shopping-bag"></i> سلة التسوق</h3>
+        <button class="drawer-close-btn" onclick="closeCartDrawer()" aria-label="إغلاق السلة" type="button">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <!-- شريط الشحن المجاني -->
+      <div class="free-shipping-progress">
+        <div class="progress-msg" id="freeShippingText">
+          أضف منتجات للحصول على <strong>شحن مجاني!</strong>
+        </div>
+        <div class="progress-bar-wrap">
+          <div class="progress-bar-fill" id="freeShippingProgress" style="width: 0%;"></div>
+        </div>
+      </div>
+
+      <!-- عناصر السلة -->
+      <div class="drawer-body" id="cartDrawerItems">
+        <!-- Dynamic Cart Items -->
+      </div>
+
+      <!-- تذييل السلة -->
+      <div class="drawer-footer">
+        <!-- كود الخصم -->
+        <div class="coupon-box">
+          <input type="text" id="couponInput" placeholder="كود الخصم (مثال: BORSSA10)" maxlength="20"/>
+          <button class="btn-apply-coupon" type="button" onclick="applyCouponCode()">تطبيق</button>
+        </div>
+
+        <div class="cart-summary-row">
+          <span>المجموع الفرعي:</span>
+          <strong id="cartDrawerSubtotal">0 جنيه</strong>
+        </div>
+        <div class="cart-summary-row" id="cartDrawerDiscountRow" style="display:none;color:var(--success);">
+          <span>قيمة الخصم:</span>
+          <strong id="cartDrawerDiscount">- 0 جنيه</strong>
+        </div>
+        <div class="cart-total-row">
+          <span>المجموع الإجمالي:</span>
+          <span id="cartDrawerTotal" style="color:var(--danger);">0 جنيه</span>
+        </div>
+
+        <button class="btn-checkout-drawer" type="button" onclick="openCheckoutModal()">
+          <i class="fas fa-check-circle"></i> متابعة إتمام الطلب
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- نافذة إتمام الطلب (Checkout Modal) -->
+  <div class="modal-wrapper" id="checkoutModal">
+    <div class="modal-card checkout-card">
+      <button class="modal-close-btn" onclick="closeCheckoutModal()" aria-label="إغلاق" type="button">
+        <i class="fas fa-times"></i>
+      </button>
+
+      <div class="checkout-header">
+        <h2>إتمام الطلب وتأكيد الفاتورة</h2>
+        <p style="color:var(--text-muted);font-size:0.95rem;">املأ بياناتك وسيتم إنشاء فاتورة طلبك وتحويلك للواتساب للتأكيد فوراً</p>
+      </div>
+
+      <!-- ملخص العناصر المختصر -->
+      <div class="checkout-order-summary-box">
+        <h4 style="font-size:1.05rem;color:var(--primary);margin-bottom:0.8rem;">
+          <i class="fas fa-receipt" style="color:var(--accent);"></i> ملخص الطلب:
+        </h4>
+        <div id="checkoutItemsList" style="max-height:140px;overflow-y:auto;padding-left:0.5rem;"></div>
+        
+        <div style="border-top:1px solid var(--border);margin-top:0.8rem;padding-top:0.6rem;display:flex;flex-direction:column;gap:0.3rem;">
+          <div style="display:flex;justify-content:space-between;font-size:0.9rem;color:var(--text-muted);">
+            <span>إجمالي المنتجات:</span>
+            <span id="checkoutSubtotal">0 جنيه</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;font-size:0.9rem;color:var(--success);">
+            <span>الخصم المطبق:</span>
+            <span id="checkoutDiscount">0 جنيه</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;font-size:0.9rem;color:var(--text-muted);">
+            <span>تكلفة الشحن:</span>
+            <span id="checkoutShipping">35 جنيه</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;font-size:1.2rem;font-weight:800;color:var(--primary);margin-top:0.4rem;padding-top:0.4rem;border-top:1px dashed var(--border);">
+            <span>المبلغ الإجمالي المستحق:</span>
+            <span id="checkoutFinalTotal" style="color:var(--danger);">0 جنيه</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- نموذج البيانات -->
+      <div class="form-group">
+        <label for="checkoutName">الاسم الكامل *</label>
+        <input type="text" id="checkoutName" placeholder="أدخل اسمك الكريم" maxlength="80" required/>
+      </div>
+
+      <div class="form-group">
+        <label for="checkoutPhone">رقم الهاتف (واتساب) *</label>
+        <input type="tel" id="checkoutPhone" placeholder="01xxxxxxxxx (رقم هاتف مصري 11 رقم)" maxlength="20" required/>
+      </div>
+
+      <div class="form-group">
+        <label for="checkoutGov">المحافظة / طريقة الاستلام *</label>
+        <select id="checkoutGov"></select>
+      </div>
+
+      <div class="form-group">
+        <label for="checkoutAddress">العنوان بالتفصيل *</label>
+        <input type="text" id="checkoutAddress" placeholder="المنطقة، الشارع، رقم العمارة والدور، علامة مميزة" maxlength="200" required/>
+      </div>
+
+      <div class="form-group">
+        <label for="checkoutNotes">ملاحظات خاصة بالطلب (اختياري)</label>
+        <textarea id="checkoutNotes" rows="2" placeholder="أي تفاصيل خاصة بالألوان أو المواعيد المفضلة..." maxlength="250"></textarea>
+      </div>
+
+      <!-- اختيار طريقة الدفع -->
+      <label style="font-weight:700;font-size:0.95rem;color:var(--primary);margin-bottom:0.6rem;display:block;">
+        طريقة الدفع المفضلة:
+      </label>
+      <div class="payment-cards-grid">
+        <div class="payment-select-card selected" onclick="selectPaymentMethod('cash', this)">
+          <i class="fas fa-hand-holding-usd"></i>
+          <span>عند الاستلام (معاينة)</span>
+        </div>
+        <div class="payment-select-card" onclick="selectPaymentMethod('instapay', this)">
+          <i class="fas fa-mobile-alt"></i>
+          <span>إنستاباي / كاش</span>
+        </div>
+        <div class="payment-select-card" onclick="selectPaymentMethod('card', this)">
+          <i class="fab fa-cc-visa"></i>
+          <span>فيزا / فوري</span>
+        </div>
+      </div>
+
+      <div class="payment-info-box" id="paymentDetailsInfo">
+        <i class="fas fa-hand-holding-usd" style="color:var(--accent);"></i>
+        <strong>الدفع عند الاستلام مع المعاينة:</strong> يمكنك فتح الشحنة ومعاينة جودة وخامات المفروشات قبل تسليم المبلغ للمندوب.
+      </div>
+
+      <button type="button" class="btn btn-primary" style="width:100%;padding:1rem;font-size:1.15rem;" onclick="submitCheckoutOrder()">
+        <i class="fab fa-whatsapp"></i> تأكيد الطلب وإرسال الفاتورة عبر واتساب
+      </button>
+    </div>
+  </div>
+
+  <!-- نافذة العرض السريع (Quick View Modal) -->
+  <div class="modal-wrapper" id="quickViewModal">
+    <div class="modal-card">
+      <button class="modal-close-btn" onclick="closeQuickView()" aria-label="إغلاق" type="button">
+        <i class="fas fa-times"></i>
+      </button>
+      <div id="quickViewModalBody">
+        <!-- Dynamic Quick View Content -->
+      </div>
+    </div>
+  </div>
+
+  <!-- نافذة المفضلة (Wishlist Modal) -->
+  <div class="modal-wrapper" id="wishlistModal">
+    <div class="modal-card" style="max-width:850px;padding:2rem;">
+      <button class="modal-close-btn" onclick="closeWishlistModal()" aria-label="إغلاق" type="button">
+        <i class="fas fa-times"></i>
+      </button>
+      <div style="margin-bottom:1.5rem;display:flex;align-items:center;gap:0.6rem;">
+        <i class="fas fa-heart" style="color:var(--danger);font-size:1.4rem;"></i>
+        <h2 style="font-size:1.5rem;color:var(--primary);">قائمة المنتجات المفضلة</h2>
+      </div>
+      <div id="wishlistModalBody">
+        <!-- Dynamic Wishlist Items -->
+      </div>
+    </div>
+  </div>
+
+  <!-- الأزرار العائمة (Floating Action Buttons) -->
+  <div class="floating-actions">
+    <!-- زر واتساب العائم -->
+    <a href="https://wa.me/201555560928?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%A8%D9%88%D8%B1%D8%B5%D8%A9%20%D9%84%D9%84%D9%85%D9%81%D8%B1%D9%88%D8%B4%D8%A7%D8%AA%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%A7%D9%84%D8%B9%D8%B1%D9%88%D8%B6%20%D9%88%D8%A7%D9%84%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA" 
+       target="_blank" rel="noopener noreferrer" class="fab-btn fab-whatsapp" title="تحدث مع خدمة العملاء على واتساب" aria-label="واتساب">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- زر العودة لأعلى -->
+    <button class="fab-btn fab-top" id="backToTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="العودة لأعلى الصفحة" aria-label="للأعلى" type="button">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+  </div>
+
+  <!-- شريط التنقل السفلي للهواتف الذكية (Mobile Bottom Nav) -->
+  <div class="mobile-bottom-nav">
+    <a href="#home" class="mobile-nav-item active">
+      <i class="fas fa-home"></i>
+      <span>الرئيسية</span>
+    </a>
+    <a href="#catalog" class="mobile-nav-item">
+      <i class="fas fa-th-large"></i>
+      <span>المنتجات</span>
+    </a>
+    <div class="mobile-nav-item" onclick="openWishlistModal()">
+      <i class="far fa-heart"></i>
+      <span>المفضلة</span>
+      <span class="badge-count wishlist-count-badge" style="top:-6px;right:6px;width:17px;height:17px;font-size:0.65rem;">0</span>
+    </div>
+    <div class="mobile-nav-item" onclick="openCartDrawer()">
+      <i class="fas fa-shopping-bag"></i>
+      <span>السلة</span>
+      <span class="badge-count cart-count-badge" style="top:-6px;right:6px;width:17px;height:17px;font-size:0.65rem;">0</span>
+    </div>
+    <a href="https://wa.me/201555560928" target="_blank" rel="noopener noreferrer" class="mobile-nav-item" style="color:#25d366;">
+      <i class="fab fa-whatsapp"></i>
+      <span>واتساب</span>
+    </a>
+  </div>
+
+  <!-- حاوية إشعارات التوست (Toast Container) -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- استدعاء ملفات الجافاسكريبت -->
+  <script src="js/products.js"></script>
+  <script src="js/borssa.js"></script>
+</body>
+</html>
